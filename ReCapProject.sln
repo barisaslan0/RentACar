@@ -4,14 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{68F75BDD-EFA1-4ADC-AC56-E480E6F35EC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C1FB382-B993-4A50-8453-7CA4B95D83EA} = {6C1FB382-B993-4A50-8453-7CA4B95D83EA}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{BBABDD9C-A4C0-44B4-B053-2D8DD65B9515}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C1FB382-B993-4A50-8453-7CA4B95D83EA} = {6C1FB382-B993-4A50-8453-7CA4B95D83EA}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{1261D58C-9E02-4A46-A2A9-E756B7A84729}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{C45F5F82-1FCB-41C5-B8B8-4C80C04195A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{6C1FB382-B993-4A50-8453-7CA4B95D83EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{6C1FB382-B993-4A50-8453-7CA4B95D83EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
