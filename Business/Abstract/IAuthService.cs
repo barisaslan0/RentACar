@@ -1,6 +1,6 @@
-﻿using Core.Utilities.Results;
+﻿using Core.Entity.Concrete;
+using Core.Utilities.Results;
 using Core.Utilities.Security.JWT;
-using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;

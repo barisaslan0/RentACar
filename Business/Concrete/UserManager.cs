@@ -5,7 +5,6 @@ using Core.Aspects.Autofac.Validation;
 using Core.Entity.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
