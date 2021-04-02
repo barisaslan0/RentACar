@@ -25,6 +25,12 @@ namespace Business.Constants
         public static string UserAdded = "Kullanıcı Başarıyla Eklendi";
         public static string UserDeleted = "Kullanıcı Başarıyla Silindi";
         public static string UserUpdated = "Kullanıcı Başarıyla Güncellendi";
+        public static string UserRegistered = "Başarıyla Kayıt Olundu";
+        public static string UserNotFound = "Kullanıcı Bulunamadı!";
+        public static string PasswordError = "Şifre Hatalı!";
+        public static string SuccessfulLogin = "Başarıyla Giriş Yapıldı";
+        public static string UserAlreadyExists = "Kullanıcı Mevcut";
+        public static string AccessTokenCreated = "Token Oluşturuldu";
 
         public static string CustomerAdded = "Müşteri Başarıyla Eklendi";
         public static string CustomerDeleted = "Müşteri Başarıyla Silindi";
@@ -40,6 +46,7 @@ namespace Business.Constants
         public static string CarImageListed = "Araba Resimleri Listelendi";
         public static string LimitOfCarImages = "Araba için en fazla 5 resim eklenebilir";
 
+        public static string AuthorizationDenied = "Yetkiniz Yok!";
         public static string CarNameAndDailyPrice = "Araba ismi en az 2 harfli ve günlük değeri 0 dan büyük olmalı";
     }
 }

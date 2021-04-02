@@ -26,7 +26,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(CarImage carImage, IFormFile file)
         {
-            var result = BusinessRules.Run(CheckCountPicturesOfCar(carImage.CarId));
+            IResult result = BusinessRules.Run(CheckCountPicturesOfCar(carImage.CarId));
             if (result != null)
             {
                 return result;
