@@ -3,7 +3,9 @@ using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
+using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,10 +14,10 @@ namespace Business.Concrete
 {
     public class RentalManager : IRentalService
     {
-        IRentalService _rentalService;
-        public RentalManager(IRentalService rentalService)
+        IRentalDal _rentalDal;
+        public RentalManager(IRentalDal rentalDal)
         {
-            _rentalService = rentalService;
+            _rentalDal = rentalDal;
         }
 
         [ValidationAspect(typeof(RentalValidator))]
@@ -23,7 +25,7 @@ namespace Business.Concrete
         {
             if (rental.ReturnDate == null)
             {
-                _rentalService.Add(rental);
+                _rentalDal.Add(rental);
                 return new SuccessResult(Messages.RentalAdded);
             }
 
@@ -32,14 +34,19 @@ namespace Business.Concrete
 
         public IResult Delete(Rental rental)
         {
-            _rentalService.Delete(rental);
+            _rentalDal.Delete(rental);
             return new SuccessResult(Messages.RentalDeleted);
+        }
+
+        public IDataResult<List<RentalDetailDto>> GetRentalDetails()
+        {
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails());
         }
 
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Update(Rental rental)
         {
-            _rentalService.Update(rental);
+            _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
         }
     }
